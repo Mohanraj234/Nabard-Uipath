@@ -102,7 +102,7 @@
             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary( of String ,Object)]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:ReadRange AddHeaders="True" DataTable="[CF]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,87" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="Case" WorkbookPath="Case Workflow\Data\Config\configaration file.xlsx">
+        <ui:ReadRange AddHeaders="True" DataTable="[CF]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,87" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="Sheet2" WorkbookPath="Case Workflow\Data\Config\configaration file.xlsx">
           <ui:ReadRange.Range>
             <InArgument x:TypeArguments="x:String">
               <Literal x:TypeArguments="x:String" Value="" />
