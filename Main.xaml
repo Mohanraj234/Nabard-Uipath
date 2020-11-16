@@ -106,13 +106,25 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Not Processname.Equals(&quot;End Process&quot;)" />
             </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="543,692" sap2010:WorkflowViewState.IdRef="State_3">
+              <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="543,935" sap2010:WorkflowViewState.IdRef="State_3">
                 <State.Entry>
                   <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Processname]" sap:VirtualizedContainerService.HintSize="497,575" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                     <Switch.Default>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Bot Closed&quot;]" />
                     </Switch.Default>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" x:Key="Case Creation" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Case Creation Process Started&quot;]" />
+                    <Sequence x:Key="Case Creation" sap:VirtualizedContainerService.HintSize="376,303" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Case Creation Process Started&quot;]" />
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Case creation workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Case Creation\Case creation.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Linear Workflow" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Linear Workflow Process\Main.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
