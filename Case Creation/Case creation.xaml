@@ -57,6 +57,12 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Case_creation" sap:VirtualizedContainerService.HintSize="284,553" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -75,7 +81,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Config File" sap:VirtualizedContainerService.HintSize="304,334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence DisplayName="Config File" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1457,7 +1463,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:BrowserScope>
       </Sequence>
-      <Sequence DisplayName="Linear process" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_23">
+      <Sequence DisplayName="Linear process" sap:VirtualizedContainerService.HintSize="810,1284" sap2010:WorkflowViewState.IdRef="Sequence_23">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Boolean" Name="LP" />
           <Variable x:TypeArguments="x:String" Name="caseNumber" />
@@ -1561,7 +1567,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <ui:WriteRange AddHeaders="False" DataTable="[Outcase_number]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="726,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Data" StartingCell="A2" WorkbookPath="Case Number.xlsx" />
+          <ui:WriteRange AddHeaders="False" DataTable="[Outcase_number]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="726,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Data" StartingCell="A2" WorkbookPath="[Config(&quot;CaseNumber&quot;).ToString]" />
           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'teams.exe  CtrlVirtualC...'" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
