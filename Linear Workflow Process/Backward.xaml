@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,2852</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>654,2752</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Backward_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -288,7 +288,7 @@
                   <OutArgument x:TypeArguments="x:String">[Backwarduser]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="3000" DelayMS="3000" DisplayName="Type Into 'INPUT  xcp_dropdown_lis...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[Backwarduser]">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="3000" DelayBetweenKeys="1000" DisplayName="Type Into 'INPUT  xcp_dropdown_lis...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[Backwarduser]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19a5c9cf-3bde-4153-814d-6a077984e8f4" InformativeScreenshot="9db812de95c1ea484d15f3586042caae" Selector="&lt;html app='chrome.exe' htmlwindowname='xcp-login-hash=' title='edmapp - Linear Process For Review 1 1 1' /&gt;&lt;webctrl tag='INPUT' type='text' aaname='Choose Previous User:' /&gt;">
                     <ui:Target.TimeoutMS>
