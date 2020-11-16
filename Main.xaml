@@ -106,9 +106,9 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Not Processname.Equals(&quot;End Process&quot;)" />
             </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_3">
+              <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="543,692" sap2010:WorkflowViewState.IdRef="State_3">
                 <State.Entry>
-                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Processname]" sap:VirtualizedContainerService.HintSize="497,226" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Processname]" sap:VirtualizedContainerService.HintSize="497,575" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                     <Switch.Default>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Bot Closed&quot;]" />
                     </Switch.Default>
@@ -118,7 +118,19 @@
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" x:Key="Case" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Case Process Started&quot;]" />
+                    <Sequence x:Key="Case" sap:VirtualizedContainerService.HintSize="376,303" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Case Process Started&quot;]" />
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Case workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Case Workflow\Case.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
                     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" x:Key="Inter-Departmental Process" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;ID Departmental Process Started&quot;]" />
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="--GO--Back" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Main.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
