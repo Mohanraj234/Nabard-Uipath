@@ -102,13 +102,11 @@
                 <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Transition.Condition>
-              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Not Processname.Equals(&quot;End Process&quot;)" />
-            </Transition.Condition>
+            <Transition.Condition>[Not Processname.Equals("End Process")]</Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="543,935" sap2010:WorkflowViewState.IdRef="State_3">
+              <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="543,744" sap2010:WorkflowViewState.IdRef="State_3">
                 <State.Entry>
-                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Processname]" sap:VirtualizedContainerService.HintSize="497,575" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Processname]" sap:VirtualizedContainerService.HintSize="497,384" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                     <Switch.Default>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Bot Closed&quot;]" />
                     </Switch.Default>
@@ -125,7 +123,7 @@
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Linear Workflow" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Linear Workflow Process\Main.xaml">
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Linear Workflow" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Linear Process Workflow\Main.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                       </ui:InvokeWorkflowFile.Arguments>
@@ -170,9 +168,7 @@
                     <Transition.To>
                       <x:Reference>__ReferenceID0</x:Reference>
                     </Transition.To>
-                    <Transition.Condition>
-                      <Literal x:TypeArguments="x:Boolean" Value="True" />
-                    </Transition.Condition>
+                    <Transition.Condition>True</Transition.Condition>
                   </Transition>
                 </State.Transitions>
               </State>
@@ -186,9 +182,7 @@
                 <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Transition.Condition>
-              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Processname.Equals(&quot;End Process&quot;)" />
-            </Transition.Condition>
+            <Transition.Condition>[Processname.Equals("End Process")]</Transition.Condition>
             <Transition.To>
               <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                 <sap:WorkflowViewStateService.ViewState>
