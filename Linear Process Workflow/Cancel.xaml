@@ -311,7 +311,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="5000" DelayMS="5000" DisplayName="Type Into 'TEXTAREA  xcp_text_area...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="i am not intersted">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="5000" DelayMS="5000" DisplayName="Type Into 'TEXTAREA  xcp_text_area...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="Case has wrongly created">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d7df6ea-7ef2-47ca-a185-e06d8f79893e" InformativeScreenshot="3394c0d97c9113f81de133e324bf9e9c" Selector="&lt;html app='chrome.exe' title='edmapp - Linear Process For Review 1 1 1' /&gt;&lt;webctrl aria-role='textbox' tag='TEXTAREA' aaname='Reason For Cancellation:' /&gt;">
                     <ui:Target.TimeoutMS>
