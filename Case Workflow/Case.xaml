@@ -2665,7 +2665,7 @@
           </ui:BrowserScope.Body>
         </ui:BrowserScope>
       </Sequence>
-      <Sequence DisplayName="Reference Cases" sap:VirtualizedContainerService.HintSize="476,1528" sap2010:WorkflowViewState.IdRef="Sequence_206">
+      <Sequence DisplayName="Reference Cases" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_206">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2839,20 +2839,20 @@
           </ui:BrowserScope.Body>
         </ui:BrowserScope>
       </Sequence>
-      <Sequence DisplayName="Share a Case" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_212">
+      <Sequence DisplayName="Share a Case" sap:VirtualizedContainerService.HintSize="554,2150" sap2010:WorkflowViewState.IdRef="Sequence_212">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe edmapp'" sap:VirtualizedContainerService.HintSize="512,1758" sap2010:WorkflowViewState.IdRef="BrowserScope_49" InformativeScreenshot="c9a04a1eb455aa1d74a2574690d522cf" Selector="&lt;html app='chrome.exe' title='edmapp - Edit Case Folder' /&gt;">
+        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe edmapp'" sap:VirtualizedContainerService.HintSize="512,2058" sap2010:WorkflowViewState.IdRef="BrowserScope_49" InformativeScreenshot="c9a04a1eb455aa1d74a2574690d522cf" Selector="&lt;html app='chrome.exe' title='edmapp - Edit Case Folder' /&gt;">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,1612" sap2010:WorkflowViewState.IdRef="Sequence_211">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,1912" sap2010:WorkflowViewState.IdRef="Sequence_211">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3013,7 +3013,7 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click 'SPAN  xcp_button-1041-b...'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_385" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5000" DelayMS="3000" DisplayName="Click 'SPAN  xcp_button-1041-b...'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_385" KeyModifiers="None" MouseButton="BTN_LEFT">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -3035,6 +3035,23 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  edmapp'" sap:VirtualizedContainerService.HintSize="436,260" sap2010:WorkflowViewState.IdRef="BrowserScope_51" InformativeScreenshot="0a29852bb2add5ff95fbf1960aa4a90a" Selector="&lt;html app='chrome.exe' title='edmapp' /&gt;">
+                  <ui:BrowserScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_219">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_5" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:BrowserScope.Body>
+                </ui:BrowserScope>
               </Sequence>
             </ActivityAction>
           </ui:BrowserScope.Body>
