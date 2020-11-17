@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,1116</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>849,1216</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>case_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,7 +100,9 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Forward workflow" sap:VirtualizedContainerService.HintSize="339,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Linear Process Workflow\Forward.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Config">[in_config]</InArgument>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Config">
+              <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_config" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke List of Stages workflow" sap:VirtualizedContainerService.HintSize="339,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Linear Process Workflow\List of Stages.xaml">
