@@ -619,7 +619,7 @@
           </ui:BrowserScope.Body>
         </ui:BrowserScope>
       </Sequence>
-      <Sequence DisplayName="create case" sap:VirtualizedContainerService.HintSize="594,5858" sap2010:WorkflowViewState.IdRef="Sequence_192">
+      <Sequence DisplayName="create case" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_192">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1240,7 +1240,7 @@
                   </ui:Click>
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  xcp_value_display-...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
                     <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb97b75b-c7d2-4a9f-bbd4-32ea2a22eefd" InformativeScreenshot="198039a2c726efba94ff73af6bfd14b4" Selector="&lt;webctrl tag='DIV' aaname='NB-*' /&gt;&#xA;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb97b75b-c7d2-4a9f-bbd4-32ea2a22eefd" InformativeScreenshot="198039a2c726efba94ff73af6bfd14b4" Selector="&lt;webctrl tag='DIV' aaname='NB-*' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
