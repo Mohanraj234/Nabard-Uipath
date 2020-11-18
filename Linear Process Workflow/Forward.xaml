@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,3545</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>654,4101</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Forward_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="26">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -65,35 +65,37 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Forward" sap:VirtualizedContainerService.HintSize="593,3480" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Forward" sap:VirtualizedContainerService.HintSize="593,4036" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Forward case" sap:VirtualizedContainerService.HintSize="551,3388" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="Forward case" sap:VirtualizedContainerService.HintSize="551,3944" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="509,3296" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="509,3852" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,3204" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[Config(&quot;openlink&quot;).ToString]">
+        <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,3760" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[Config(&quot;openlink&quot;).ToString]">
           <ui:OpenBrowser.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,3103" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,3659" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="Forwarduser" />
                   <Variable x:TypeArguments="x:String" Name="Casenumber" />
+                  <Variable x:TypeArguments="x:String" Name="For_User" />
+                  <Variable x:TypeArguments="x:String" Name="For_password" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -101,7 +103,18 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  j_username-input...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[Config(&quot;username1&quot;).ToString]">
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter The User Name">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[For_User]</OutArgument>
+                  </ui:InputDialog.Result>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InputDialog>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  j_username-input...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[For_User]">
                   <ui:TypeInto.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57d31bec-854f-4ebf-90d0-845e454af896" InformativeScreenshot="0e1b304d97bfffc892abd008acecb377" Selector="&lt;webctrl id='j_username-inputEl' tag='INPUT' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -113,7 +126,18 @@
                     </ui:Target>
                   </ui:TypeInto.Target>
                 </ui:TypeInto>
-                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  j_password-input...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[Config(&quot;password1&quot;).ToString]">
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="True" Label="Password">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[For_password]</OutArgument>
+                  </ui:InputDialog.Result>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InputDialog>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  j_password-input...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[For_password]">
                   <ui:TypeInto.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="67756268-06ba-46fe-9c00-d6a30c28c2c1" InformativeScreenshot="b5948213c8ef1b11fe5b109527c51921" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -410,7 +434,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="276e8fea-fbf4-4e9f-bce0-7207d8346bd8" InformativeScreenshot="9a366f7d1865d8486a7644d2e1fecd14" Selector="&lt;html app='chrome.exe' title='edmapp - inbox' /&gt;&#xD;&#xA;&lt;webctrl tag='A' aaname='Logout' /&gt;&#xD;&#xA;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="276e8fea-fbf4-4e9f-bce0-7207d8346bd8" InformativeScreenshot="9a366f7d1865d8486a7644d2e1fecd14" Selector="&lt;html app='chrome.exe' title='edmapp - inbox' /&gt;&#xA;&lt;webctrl tag='A' aaname='Logout' /&gt;&#xA;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>

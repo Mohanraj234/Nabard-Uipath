@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Case_creation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,658" sap2010:WorkflowViewState.IdRef="Case_creation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Case_creation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,618" sap2010:WorkflowViewState.IdRef="Case_creation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="31">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -32,10 +32,10 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -64,7 +64,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Case_creation" sap:VirtualizedContainerService.HintSize="284,553" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
@@ -141,20 +141,35 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:ForEachRow>
       </Sequence>
-      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Login in edmapp" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[Config(&quot;edmapp_URL&quot;).ToString]">
+      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Login in edmapp" sap:VirtualizedContainerService.HintSize="467,1078" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[Config(&quot;edmapp_URL&quot;).ToString]">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Credientials" sap:VirtualizedContainerService.HintSize="376,608" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Credientials" sap:VirtualizedContainerService.HintSize="376,977" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="user_name" />
+                <Variable x:TypeArguments="x:String" Name="Password" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type User Name" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[Config(&quot;User Name&quot;).ToString]">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter The User Name">
+                <ui:InputDialog.Result>
+                  <OutArgument x:TypeArguments="x:String">[user_name]</OutArgument>
+                </ui:InputDialog.Result>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InputDialog>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type User Name" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[user_name]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6098239e-b8e5-49e8-8490-8af2ad804577" InformativeScreenshot="5c1bb768968d6dc9cb01f2803fdfd940" Selector="&lt;webctrl tag='INPUT' aaname='User name:' /&gt;&#xA;">
                     <ui:Target.TimeoutMS>
@@ -166,7 +181,12 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[Config(&quot;Password&quot;).ToString]">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="True" Label="Password">
+                <ui:InputDialog.Result>
+                  <OutArgument x:TypeArguments="x:String">[Password]</OutArgument>
+                </ui:InputDialog.Result>
+              </ui:InputDialog>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[Password]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8bd42203-c3fc-4708-892b-c98f795b4433" InformativeScreenshot="ab3ba49e229917dcc0fefb055438e638" Selector="&lt;webctrl type='password' aaname='Password:' /&gt;&#xA;">
                     <ui:Target.TimeoutMS>
@@ -488,7 +508,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;Case Type&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[Config(&quot;Case_Type&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type &quot;Case Type&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[Config(&quot;Case_Type&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b238e5b3-0b3e-4e2a-ada5-5b153fbbdd16" InformativeScreenshot="051405810f4faa891f3a9f7b22223ff1" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&#xA;&lt;webctrl type='text' aaname='Case Type:' /&gt;&#xA;">
                               <ui:Target.TimeoutMS>
@@ -500,7 +520,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;Year&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[Config(&quot;Year&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type &quot;Year&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[Config(&quot;Year&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a6a6f80-8a42-4af1-95b6-60de31424ce6" InformativeScreenshot="6408b1c8e23866aff513c3b4082d659e" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&#xA;&lt;webctrl type='text' aaname='Year:' /&gt;&#xA;">
                               <ui:Target.TimeoutMS>
@@ -512,7 +532,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;Division&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[Config(&quot;Division&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type &quot;Division&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[Config(&quot;Division&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2cc7cfe9-31c7-49b8-b61d-39118f61005a" InformativeScreenshot="bbe6ef473bb27cb527f5d75a0c56b35d" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&#xA;&lt;webctrl type='text' aaname='Division:' /&gt;&#xA;">
                               <ui:Target.TimeoutMS>
@@ -536,7 +556,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;Language&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[Config(&quot;Language&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type &quot;Language&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[Config(&quot;Language&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="554c6bde-3c43-4ba8-90f4-0a3db3a4e4c7" InformativeScreenshot="0f2e30e29332c7fdf76a2ead199ff5d3" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&#xA;&lt;webctrl tag='INPUT' type='text' aaname='Language:' /&gt;&#xA;">
                               <ui:Target.TimeoutMS>
@@ -548,7 +568,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;Section&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[Config(&quot;Section&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type &quot;Section&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[Config(&quot;Section&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c2ab11dc-802f-4c8e-af30-24b6a7791f07" InformativeScreenshot="d70c84e9e0976d50e8625acda8b946bf" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&#xA;&lt;webctrl tag='INPUT' type='text' aaname='Section:' /&gt;&#xA;">
                               <ui:Target.TimeoutMS>
@@ -560,7 +580,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;Nature Of Case&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="[Config(&quot;Nature_of_case&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type &quot;Nature Of Case&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="[Config(&quot;Nature_of_case&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19fe809c-4037-4878-96a9-34199ae37834" InformativeScreenshot="40b84bf30c5ac0a30baeaa9e1df83e4a" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&lt;webctrl type='text' aaname='Nature Of Case:' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -572,7 +592,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Select File Number&quot;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click Select File Number&quot;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -616,7 +636,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Ok&quot;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="3000" DisplayName="Click &quot;Ok&quot;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -638,7 +658,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  xcp_text_input-1...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_12" Text="[Config(&quot;Subject&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type Into 'INPUT  xcp_text_input-1...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_12" Text="[Config(&quot;Subject&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6cb0e912-2303-4c1a-851f-bd4ec62419ad" InformativeScreenshot="8165af6d35feff7f7b60b635aaa467bb" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&#xA;&lt;webctrl tag='INPUT' type='text' aaname='Case Subject:' /&gt;&#xA;">
                               <ui:Target.TimeoutMS>
@@ -650,7 +670,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  xcp_text_area...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_13" Text="[Config(&quot;Description&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type Into 'TEXTAREA  xcp_text_area...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_13" Text="[Config(&quot;Description&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de7398ae-e8e4-45c7-ad8b-cd96ce98d821" InformativeScreenshot="41bc45adb40d134ad8f9d414500736ee" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&lt;webctrl tag='TEXTAREA' aaname='Description:' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -684,7 +704,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'DIV  ext-element-32'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_14" Text="[Config(&quot;Keyword&quot;).ToString+ &quot;[k(enter)]&quot;]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type Into 'DIV  ext-element-32'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_14" Text="[Config(&quot;Keyword&quot;).ToString+ &quot;[k(enter)]&quot;]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a65219f-cbc2-4a52-8a29-95011619ec9e" InformativeScreenshot="d70ca053a36bfe8f7ab0efe1757c0f88" Selector="&lt;html app='chrome.exe' title='edmapp - Create Case' /&gt;&lt;webctrl tag='DIV' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -696,7 +716,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Final create case&quot;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click &quot;Final create case&quot;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -738,7 +758,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:BrowserScope>
-        <Delay Duration="00:00:30" sap:VirtualizedContainerService.HintSize="554,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+        <Delay Duration="00:00:35" sap:VirtualizedContainerService.HintSize="554,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
         <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe edmapp'" sap:VirtualizedContainerService.HintSize="554,5109" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="259fd7cc5289741a5be54ad9e27aa451" Selector="&lt;html app='chrome.exe' title='edmapp - Edit Case Folder' /&gt;">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
@@ -921,7 +941,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click 'A  xcp_button-2547'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="10000" DelayMS="2000" DisplayName="Click 'A  xcp_button-2547'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -943,7 +963,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="8000" DisplayName="Click 'DIV  xcp_fileupload_but...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="10000" DisplayName="Click 'DIV  xcp_fileupload_but...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -965,7 +985,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -987,7 +1007,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="8000" DisplayName="Type Into 'ComboBox'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_16" Text="[Config(&quot;Draft_Document_FileName&quot;).ToString]">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="10000" DisplayName="Type Into 'ComboBox'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_16" Text="[Config(&quot;Draft_Document_FileName&quot;).ToString]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed36f6d3-cc6d-4cd4-90bb-864ac9b9241c" InformativeScreenshot="fb42b489c338866ac6861902978c4538" Selector="&lt;wnd app='chrome.exe' title='Open' /&gt;&#xA;&lt;wnd aaname='File name:' idx='2' /&gt;&#xA;">
                           <ui:Target.TimeoutMS>
@@ -999,7 +1019,7 @@
                         </ui:Target>
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="5000" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0316e52d-e057-4ec9-8627-4c5a2958739c" InformativeScreenshot="47d103a63e0a2f0237a9224747f88907" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -1447,7 +1467,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:BrowserScope>
       </Sequence>
-      <Sequence DisplayName="Linear process" sap:VirtualizedContainerService.HintSize="810,1874" sap2010:WorkflowViewState.IdRef="Sequence_23">
+      <Sequence DisplayName="Linear process" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_23">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Boolean" Name="LP" />
           <Variable x:TypeArguments="x:String" Name="caseNumber" />
