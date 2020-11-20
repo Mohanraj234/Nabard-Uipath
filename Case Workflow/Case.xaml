@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Case" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="934,1286" sap2010:WorkflowViewState.IdRef="Case_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Case" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,1326" sap2010:WorkflowViewState.IdRef="Case_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -621,14 +621,14 @@
           </ui:BrowserScope.Body>
         </ui:BrowserScope>
       </Sequence>
-      <Sequence DisplayName="create case" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_192">
+      <Sequence DisplayName="create case" sap:VirtualizedContainerService.HintSize="594,6112" sap2010:WorkflowViewState.IdRef="Sequence_192">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe edmapp'" sap:VirtualizedContainerService.HintSize="915,618" sap2010:WorkflowViewState.IdRef="BrowserScope_40" InformativeScreenshot="107bcb838b7a514b24f19c1c7b8b5d77" Selector="&lt;html app='chrome.exe' title='edmapp - Cases-Search' /&gt;">
+        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe edmapp'" sap:VirtualizedContainerService.HintSize="552,618" sap2010:WorkflowViewState.IdRef="BrowserScope_40" InformativeScreenshot="107bcb838b7a514b24f19c1c7b8b5d77" Selector="&lt;html app='chrome.exe' title='edmapp - Cases-Search' /&gt;">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -796,15 +796,15 @@
             </ActivityAction>
           </ui:BrowserScope.Body>
         </ui:BrowserScope>
-        <Sequence DisplayName="Create case" sap:VirtualizedContainerService.HintSize="915,5807" sap2010:WorkflowViewState.IdRef="Sequence_191">
+        <Sequence DisplayName="Create case" sap:VirtualizedContainerService.HintSize="552,5362" sap2010:WorkflowViewState.IdRef="Sequence_191">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="873,22" sap2010:WorkflowViewState.IdRef="Delay_17" />
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Create Case" sap:VirtualizedContainerService.HintSize="873,3834" sap2010:WorkflowViewState.IdRef="BrowserScope_42" InformativeScreenshot="fc287414db825f6671bb7e3b4df1b06e" Selector="&lt;html app='chrome.exe' title='edmapp - Menu Landing' /&gt;">
+          <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="Delay_17" />
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Create Case" sap:VirtualizedContainerService.HintSize="510,3834" sap2010:WorkflowViewState.IdRef="BrowserScope_42" InformativeScreenshot="fc287414db825f6671bb7e3b4df1b06e" Selector="&lt;html app='chrome.exe' title='edmapp - Menu Landing' /&gt;">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -1202,14 +1202,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:BrowserScope>
-          <Delay Duration="00:00:30" sap:VirtualizedContainerService.HintSize="873,22" sap2010:WorkflowViewState.IdRef="Delay_18" />
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe edmapp'" sap:VirtualizedContainerService.HintSize="873,1717" sap2010:WorkflowViewState.IdRef="BrowserScope_43" InformativeScreenshot="ae559514b44a8757b7c5d6dd588202f6" Selector="&lt;html app='chrome.exe' title='edmapp - Edit Case Folder' /&gt;">
+          <Delay Duration="00:00:30" sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="Delay_18" />
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe edmapp'" sap:VirtualizedContainerService.HintSize="510,1272" sap2010:WorkflowViewState.IdRef="BrowserScope_43" InformativeScreenshot="ae559514b44a8757b7c5d6dd588202f6" Selector="&lt;html app='chrome.exe' title='edmapp - Edit Case Folder' /&gt;">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,1571" sap2010:WorkflowViewState.IdRef="Sequence_190">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="418,1126" sap2010:WorkflowViewState.IdRef="Sequence_190">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="Outcase_number" />
                     <Variable x:TypeArguments="x:String" Name="caseNumber" />
@@ -1219,7 +1219,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click 'A  xcp_header_tab-1885'" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="Click_331" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click 'A  xcp_header_tab-1885'" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="Click_331" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -1241,7 +1241,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  xcp_value_display-...'" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  xcp_value_display-...'" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb97b75b-c7d2-4a9f-bbd4-32ea2a22eefd" InformativeScreenshot="198039a2c726efba94ff73af6bfd14b4" Selector="&lt;webctrl tag='DIV' aaname='NB-*' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -1256,62 +1256,26 @@
                       <OutArgument x:TypeArguments="x:String">[caseNumber]</OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="797,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[caseNumber]" />
-                  <If Condition="[caseNumber.Contains(&quot;Creating Case Under Finance&quot;)]" sap:VirtualizedContainerService.HintSize="797,851" sap2010:WorkflowViewState.IdRef="If_1">
-                    <If.Then>
-                      <Sequence DisplayName="Sequence1" sap:VirtualizedContainerService.HintSize="376,704" sap2010:WorkflowViewState.IdRef="Sequence_223">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="x:String" Name="a" />
-                          <Variable x:TypeArguments="s:String[]" Name="b" />
-                          <Variable x:TypeArguments="x:String" Name="c" />
-                        </Sequence.Variables>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="s:String[]">[b]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="s:String[]">[caseNumber.Split("-"c)]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[c]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">[b(b.Length-2)]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <ui:Replace BuilderPattern="b " sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[a]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;b &quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[&quot;-&quot;+c.ToString+&quot;-Sample&quot;]" RegexOption="IgnoreCase" Result="[sample]">
-                          <ui:Replace.Replacement>
-                            <InArgument x:TypeArguments="x:String">
-                              <Literal x:TypeArguments="x:String" Value="" />
-                            </InArgument>
-                          </ui:Replace.Replacement>
-                        </ui:Replace>
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[sample]" />
-                        <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[Outcase_number]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="GenerateDataTable_5" Input="[sample]" />
-                        <ui:WriteRange AddHeaders="False" DataTable="[Outcase_number]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[Config(&quot;Case_Number_FileSheetName&quot;).ToString]" StartingCell="A2" WorkbookPath="[Config(&quot;Case_Number_FileName&quot;).ToString]" />
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_226">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[Outcase_number]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="GenerateDataTable_4" Input="[caseNumber]" />
-                        <ui:WriteRange AddHeaders="False" DataTable="[Outcase_number]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[Config(&quot;Case_Number_FileSheetName&quot;).ToString]" StartingCell="A2" WorkbookPath="[Config(&quot;Case_Number_FileName&quot;).ToString]" />
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  btn_badge_button-2197'" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="Click_332" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,505" sap2010:WorkflowViewState.IdRef="Sequence_226">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[caseNumber]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[caseNumber.Substring(0,36)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[caseNumber]" />
+                    <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[Outcase_number]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="GenerateDataTable_4" Input="[caseNumber]" />
+                    <ui:WriteRange AddHeaders="False" DataTable="[Outcase_number]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[Config(&quot;Case_Number_FileSheetName&quot;).ToString]" StartingCell="A2" WorkbookPath="[Config(&quot;Case_Number_FileName&quot;).ToString]" />
+                  </Sequence>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  btn_badge_button-2197'" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="Click_332" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -1333,7 +1297,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="797,51" sap2010:WorkflowViewState.IdRef="CommentOut_78">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="CommentOut_78">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="768,290" sap2010:WorkflowViewState.IdRef="Sequence_225">
                         <sap:WorkflowViewStateService.ViewState>
@@ -1828,7 +1792,7 @@
           </ui:BrowserScope.Body>
         </ui:BrowserScope>
       </Sequence>
-      <Sequence DisplayName="Documents" sap:VirtualizedContainerService.HintSize="612,6786" sap2010:WorkflowViewState.IdRef="Sequence_203">
+      <Sequence DisplayName="Documents" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_203">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
